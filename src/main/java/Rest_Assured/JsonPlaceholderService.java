@@ -12,14 +12,14 @@ public class JsonPlaceholderService {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
     }
 
-    public String getMaxUserIdVal(){
+    public String getResponse(String query, String value){
         Response response = given()
                 .when()
-                .get("/posts")
+                .get(query)
                 .thenReturn();
         return response
                 .jsonPath()
-                .get("userId.max()")+"";
+                .get(value)+"";
     }
 
     public String getMaxPostIdValForUserId(String userId){

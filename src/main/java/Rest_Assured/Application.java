@@ -6,13 +6,13 @@ public class Application {
 
         JsonPlaceholderService service = new JsonPlaceholderService();
 
-        System.out.println(service.getMaxUserIdVal());
+        String userId = service.getResponse("/posts?id=1", "title");
 
-        String userId = service.getMaxUserIdVal();
+        System.out.println(userId);
 
 
-        String postId = service.getMaxPostIdValForUserId(userId);
-        service.addCommentForPostId(postId);
+//        String postId = service.getMaxPostIdValForUserId(userId);
+//        service.addCommentForPostId(postId);
 
     }
 
