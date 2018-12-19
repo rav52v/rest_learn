@@ -5,6 +5,9 @@ public class Application {
     public static void main(String[] args) {
 
         JsonPlaceholderService service = new JsonPlaceholderService();
+
+        System.out.println(service.getMaxUserIdVal());
+
         String userId = service.getMaxUserIdVal();
 
 
