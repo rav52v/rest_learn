@@ -1,4 +1,4 @@
-package Rest_Assured.Rest_Assured;
+package Rest_Assured;
 
 public class Application {
 
